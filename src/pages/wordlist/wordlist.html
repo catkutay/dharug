@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <language-chooser></language-chooser>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <div *ngIf='loading==true'>
+    loading...
+  </div>
+
+  <div *ngIf="entriesCount == 0">
+    <p class="center">No entries for {{ letter$ | async }}</p>
+  </div>
+
+  <ion-list
+    class="wordlist"
+    *ngIf='(! loading) && (entriesCount > 0)'
+    [virtualScroll]='entries$ | async'
+    [approxItemHeight]="'50px'"
+    >
+    <ion-item
+      *virtualItem='let entry'>
+
+      <wordlist-entry item-content [sortKey]='language.sortKey' [entry]='entry' (click)='goToEntry(entry)'></wordlist-entry>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

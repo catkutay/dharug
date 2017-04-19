@@ -1,0 +1,14 @@
+<p class="def">{{sense.def}}</p>
+
+<div *ngIf='sense.examples'>
+
+  <div *ngIf='sense.examples.length > 0'>
+    <div *ngFor="let example of sense.examples">
+      <sense-example [example]='example'></sense-example>
+    </div>
+  </div>
+
+  <div *ngIf='! sense.examples.length'>
+      <sense-example [example]='sense.examples'></sense-example>
+  </div>
+</div>

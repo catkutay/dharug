@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="flex">
+
+  <div class="entry-container">
+
+    <section class="entry" (swipe)="swipeEvent($event)">
+
+      <div class="hw">
+        <h1 *ngIf="entry.lxc">{{entry.lxc}}</h1>
+        <h1 *ngIf="! entry.lxc">{{entry.lx}}</h1>
+      </div>
+
+      <div class="full-form" *ngIf="entry.lxc && entry.lx">
+        <p>Full form: {{entry.lx}}</p>
+      </div>
+
+      <div
+        class="image square"
+        *ngFor="let image of entry.image"
+        [style.background-image]='image.path'>
+      </div>
+
+      <div class="senses" *ngIf='entry.senses'>
+        <div *ngIf='entry.senses.length > 0'>
+          <ion-card *ngFor="let sense of entry.senses">
+            <ion-card-content>
+              <entry-sense [sense]='sense'></entry-sense>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <div *ngIf='! entry.senses.length'>
+          <ion-card>
+            <ion-card-content>
+              <entry-sense [sense]='entry.senses'></entry-sense>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="page-nav" *ngIf="! search">
+    <button ion-button icon-only clear color="dark" (click)="prev()" *ngIf="index>0">
+      <ion-icon name="arrow-dropleft-circle"></ion-icon>
+    </button>
+    <button ion-button icon-only clear color="dark" (click)="next()" *ngIf="index<entriesIndex.length-1">
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+    </button>
+  </div>
+</ion-content>

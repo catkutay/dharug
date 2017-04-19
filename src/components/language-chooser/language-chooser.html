@@ -1,0 +1,10 @@
+<ion-buttons end>
+  <button
+    *ngFor="let language of languages$  | async  | values"
+    ion-button
+    small
+    [color]="language.selected==true ? 'primary' : 'default'"
+    (click)="setLanguage(language)">
+    {{language.name}}
+  </button>
+</ion-buttons>

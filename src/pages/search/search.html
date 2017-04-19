@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <language-chooser></language-chooser>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-searchbar
+    #term
+    (keyup)="search(term.value)"
+    (ionClear)="searchClear()"
+    ></ion-searchbar>
+
+
+  <ion-list
+    class="wordlist"
+    [virtualScroll]='searchEntries'
+    [approxItemHeight]="'50px'"
+    >
+    <ion-item
+      *virtualItem='let entry'>
+
+      <wordlist-entry item-content [sortKey]='language.sortKey' [entry]='entry' (click)='goToEntry(entry)'></wordlist-entry>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
