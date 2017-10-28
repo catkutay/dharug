@@ -198,8 +198,12 @@ export class EntryService {
       for (let key in this.entriesAll) {
         let searchstring = this.flattenSenses( this.entriesAll[key] )
         if (searchstring) {
+          if (this.languageCode["name"]=="English")
+            if (this.entriesAll[key].lx)  searchstring += this.entriesAll[key].def
+          else{
           if (this.entriesAll[key].lx)  searchstring += this.entriesAll[key].lx
           if (this.entriesAll[key].lxc) searchstring += this.entriesAll[key].lxc
+          }
           if (searchstring.toLowerCase().indexOf( term.trim().toLowerCase() ) > -1) searchEntries.push(this.entriesAll[key])
         }
       }
