@@ -12,7 +12,7 @@ export class LanguageService {
 
   constructor() {
     this.languages = [
-      { "code":"GYD", "name": "Kayardilt", "sortKey":"lx" },
+      { "code":"GYD", "name": "Dharug", "sortKey":"lx" },
       { "code":"ENG", "name": "English",   "sortKey":"def" }
     ]
     this.setLanguage(this.languages[0])

@@ -120,6 +120,8 @@ export class EntryService {
         let flattened = this.flattenSenses(entry)
         if (flattened) {
           let char = (lang=='ENG') ? this.getInitial(flattened) : entry.initial
+          
+          //entry.def??
           let word = (lang=='ENG') ? this.getWord(flattened) : entry.lx
           if (typeof(this.entriesIndex[lang][char])=="undefined") this.entriesIndex[lang][char] = []
           this.entriesIndex[lang][char].push({key:key, word:word})
