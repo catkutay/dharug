@@ -1,0 +1,75 @@
+{
+  "dbVersion" : "0.0.1",
+  "entries" : [ {
+    "assets" : {
+      "images" : [ {
+        "id" : "purple.jpg",
+        "type" : "image"
+      }, {
+        "id" : "yellow.jpg",
+        "type" : "image"
+      } ]
+    },
+    "initial" : "a",
+    "lx" : "apo",
+    "publish" : "true",
+    "senses" : [ {
+      "def" : "Bye-bye!",
+      "ge" : "goodbye",
+      "ps" : "INTERJECT"
+    }, {
+      "def" : "Recent loan from Wik-Mungkan."
+    } ]
+  }, {
+    "initial" : "b",
+    "lx" : "baaja malaa",
+    "publish" : "true",
+    "senses" : {
+      "def" : "tide go down, tide be low."
+    }
+  }, {
+    "initial" : "b",
+    "lx" : "babaratha",
+    "lxc" : "babarath",
+    "publish" : "true",
+    "senses" : {
+      "def" : "Do quickly, immediately.",
+      "examples" : {
+        "ex" : "Nyingka jinkaja babaratha ngumbanda kajakaj!",
+        "ft" : "Quickly, follow your father."
+      },
+      "ge" : "do.quick",
+      "ps" : "VI"
+    }
+  }, {
+    "initial" : "b",
+    "lx" : "babiju",
+    "publish" : "true",
+    "senses" : [ {
+      "def" : "Granny: father's mother, paternal grandmother.",
+      "examples" : {
+        "ex" : "Kangkiya marrija ngunguki babijarrathinabay.",
+        "ft" : "I heard the story from my other granny."
+      },
+      "ge" : "FaMo",
+      "ps" : "N"
+    }, {
+      "def" : "Father's mother's brother or sister.",
+      "ge" : "FaMoSi"
+    }, {
+      "def" : "Harmonic-generation member of father's mother's patriline.",
+      "ge" : "G2n(FaMo's.Patrinline)"
+    } ]
+  }, {
+    "initial" : "b",
+    "lx" : "babijungarrba",
+    "lxc" : "babijungarrp",
+    "publish" : "true",
+    "senses" : {
+      "def" : "Pair, one of whom calls the other 'father's mother'.",
+      "ge" : "FaMoDYAD",
+      "ps" : "N"
+    }
+  } ],
+  "letters" : [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z" ]
+}
