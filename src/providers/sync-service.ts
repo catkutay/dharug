@@ -127,9 +127,9 @@ online?
 
   loadAll() {
     this.broadcast("using local data")
-     console.log("Usinglocal data");
+     console.log("Using local data");
     // 2a get letters from pouch
-    console.log("here")
+    
     this.databaseService.getFromPouch("letters")
       .then((letters) => {
         // 2b get get entries from pouch
