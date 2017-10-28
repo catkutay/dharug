@@ -10,7 +10,15 @@ var config = {
     storageBucket: "XXXXXXXX",
     messagingSenderId: "XXXXXXXX"
 };
-
+var config = {
+    apiKey: "AIzaSyAof-FJq1ZJiE5Wx-fvTK4xc9b8whWquO4",
+    authDomain: "dharug-3239a.firebaseapp.com",
+    databaseURL: "https://dharug-3239a.firebaseio.com",
+    projectId: "dharug-3239a",
+    storageBucket: "dharug-3239a.appspot.com",
+    messagingSenderId: "449884289934"
+  };
+  
 firebase.initializeApp(config);
 
 function getFromFirebase(key) {

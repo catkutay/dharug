@@ -17,16 +17,19 @@ import { SyncService } from '../providers/sync-service'
 
 // 3rd party deps
 import firebase from 'firebase'
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
 
 // firebase
 export const firebaseConfig = {
-  apiKey: "XXXXXXXX",
-  authDomain: "XXXXXXXX",
-  databaseURL: "XXXXXXXX",
-  projectId: "XXXXXXXX",
-  storageBucket: "XXXXXXXX",
-  messagingSenderId: "XXXXXXXX"
+
+    apiKey: "AIzaSyAof-FJq1ZJiE5Wx-fvTK4xc9b8whWquO4",
+    authDomain: "dharug-3239a.firebaseapp.com",
+    databaseURL: "https://dharug-3239a.firebaseio.com",
+    projectId: "dharug-3239a",
+    storageBucket: "dharug-3239a.appspot.com",
+    messagingSenderId: "449884289934"
+  
 }
 
 @NgModule({
@@ -53,7 +56,8 @@ export const firebaseConfig = {
     SyncService,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider
   ]
 })
 export class AppModule {

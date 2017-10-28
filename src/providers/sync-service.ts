@@ -106,6 +106,7 @@ online?
               }
             })
             .catch((err) => console.log("couldn't get db version from firebase"))
+            
         })
         .catch((err) => {
           console.log('no local dbversion, download all')
@@ -126,7 +127,9 @@ online?
 
   loadAll() {
     this.broadcast("using local data")
+     console.log("Usinglocal data");
     // 2a get letters from pouch
+    console.log("here")
     this.databaseService.getFromPouch("letters")
       .then((letters) => {
         // 2b get get entries from pouch
@@ -142,6 +145,9 @@ online?
         if (this.connectivityService.isOnline()) {
           // 3b try to download letters, then entries
           this.downloadAll()
+          let msg = "downloaded the words"
+          console.log(msg)
+          this.broadcast(msg)
         } else {
           // no connection. can't download
           let msg = "no letters, no connection, can't download the words"
@@ -153,6 +159,7 @@ online?
 
   downloadAll() {
     this.broadcast("downloading all data from firebase")
+    console.log("Downloading all");
     this.databaseService.getFromFirebase("dbVersion")
       .then((dbVersion) => {
         // save dbVersion to pouch for next time
